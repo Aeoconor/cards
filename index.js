@@ -1,9 +1,13 @@
 // Handle dropdown selections
+if(performance.navigation.type == 2){
+    location.reload(true);
+ }
 function goToNewPage()
 {
-    console.log(document.getElementById("categoriesDropdown").value)
     if (document.getElementById("categoriesDropdown").value != 'none') {
-        window.location = document.getElementById("categoriesDropdown").value
+        if (document.getElementById("categoriesDropdown").value != 'Categories') {
+            window.location = document.getElementById("categoriesDropdown").value
+        }
     }
 }
 const selectDropdown = document.getElementById("categoriesDropdown");
