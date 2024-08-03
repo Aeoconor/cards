@@ -59,14 +59,15 @@
             </center>
             <div class="row">
                 <div class="col align-self-center">
-                    <select class="form-select-lg" aria-label="Default select example">
+                    <select id="categoriesDropdown" class="form-select-lg" aria-label="Default select example">
                       <option selected>Categories</option>
-                      <option value="1">Pokemon</option>
-                      <option value="2">Marvel</option>
-                      <option value="3">DC</option>
-                      <option value="4">One Piece</option>
-                      <option value="5">Weiss Schwarz</option>
-                      <option value="6">Misc</option>
+                      <option value="pokemon.html">Pokemon</option>
+                      <option value="marvel.html">Marvel</option>
+                      <option value="dc.html">DC</option>
+                      <option value="onepiece.html">One Piece</option>
+                      <option value="weiss.html">Weiss Schwarz</option>
+                      <option value="yugioh.html">Yugioh</option>
+                      <option value="misccards.html">Misc</option>
                     </select>
                 </div>
             </div>
@@ -80,6 +81,19 @@
 
     <!-- this is my JS via cdn -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        
+        // Handle dropdown selections
+        function goToNewPage()
+        {
+            console.log(document.getElementById("categoriesDropdown").value)
+            if (document.getElementById("categoriesDropdown").value != 'none') {
+                window.location = document.getElementById("categoriesDropdown").value
+            }
+        }
+        const selectDropdown = document.getElementById("categoriesDropdown");
+        selectDropdown.addEventListener('change', goToNewPage);
+    </script>
 
 </body>
 

@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>Marvel Cards</title>
+    <style>
+
+        select {
+            width: 50%;
+            background:black;
+            color: white;
+        }
+
+        .image-desc-row img {
+            width: 50%;
+        }
+
+        .desc-col {
+            padding-top: 10%
+        }
+
+        .desc-col a {
+            font-size: xx-large;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+</head>
+
+<body style='background-color: black;'>
+    <div class="container text-center">
+            <center>
+                <h1 style="font-size: 90px; padding-bottom: 10%;">Marvel Cards</h1>
+                <div class="row image-desc-row">
+                    <div class="col-6 img-col">
+                        <img src="https://www.dropbox.com/scl/fi/j7aiukph855v66l0b5391/gamora_flair2024.jpg?rlkey=iul70epiwawacvy47m33dgtju&st=61ia1phn&raw=1"/>
+                    </div>
+                    <div class="col-6 desc-col">
+                        <a target="_blank" rel="noopener noreferrer">Gamora Daybreak Flair /25</a>
+                        <h2>Marvel Flair 2024</h2>
+                    </div>
+                </div>
+            </center>
+            <footer>
+            </footer>
+    </div>
+
+
+    <!-- this is my JS via cdn -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        // select all desc-col elements
+        const descColList = document.querySelectorAll(".desc-col")
+        descColList.forEach((element) => {
+            console.log(element)
+            console.log(element.firstElementChild)
+            combinedSetCard = element.lastElementChild.textContent.concat(" " + element.firstElementChild.textContent)
+            searchableText = combinedSetCard.replaceAll(" ", "+")
+            element.firstElementChild.href = `https://www.ebay.com/sch/i.html?_nkw=${searchableText}&LH_Sold=1&LH_Complete=1`
+            console.log(element.firstElementChild)
+        })
+
+        $('img').click(function(e){
+            var img = $(e.target);
+            var src = img.attr("src");
+            window.open(src);
+        });
+    </script>
+
+</body>
+
+</html>
