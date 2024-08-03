@@ -20,3 +20,10 @@
     margin-right: auto;
     margin-left: auto;
 }
+
+h1 {
+    font-size: 90px !important;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    color: dimgrey !important;
+}

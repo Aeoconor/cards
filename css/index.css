@@ -1,0 +1,33 @@
+select {
+    height: 3.5rem;
+    width: 50%;
+    border-radius: 1rem;
+    font-size: x-large !important;
+    background:black;
+    color: white;
+}
+
+img {
+    width: 77%;
+}
+
+@media only screen and (max-width: 1200px) {
+    img {
+        width: 80%;
+        padding-top: 25%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    img {
+        width: 100%;
+        padding-top: 40%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    img {
+        width: 100%;
+        padding-top: 50%;
+    }
+}

@@ -2,43 +2,8 @@
 
 <head>
     <title>Cards</title>
-    <style>
 
-        select {
-            height: 3.5rem;
-            width: 50%;
-            border-radius: 1rem;
-            font-size: x-large !important;
-            background:black;
-            color: white;
-        }
-
-        img {
-            width: 77%;
-        }
-
-        @media only screen and (max-width: 1200px) {
-            img {
-                width: 80%;
-                padding-top: 25%;
-            }
-        }
-
-        @media only screen and (max-width: 900px) {
-            img {
-                width: 100%;
-                padding-top: 40%;
-            }
-        }
-
-        @media only screen and (max-width: 600px) {
-            img {
-                width: 100%;
-                padding-top: 50%;
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href=".\css\index.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
         integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -47,47 +12,29 @@
 
 <body style='background-color: black;'>
     <div class="container-fluid text-center">
-            <center>
-                <!-- <h1 style="font-size: 90px; padding-bottom: 10%; padding-top: 35%;">Cards Categories</h1> -->
-                 <img src="https://www.dropbox.com/scl/fi/dqf02zoffvbq3a737diw4/site_card_logo.png?rlkey=mkdnpq4o9hgjq9cpgg9jad2o0&st=dizfdhxx&raw=1"/>
-            </center>
-            <div class="row">
-                <div class="col align-self-center">
-                    <select id="categoriesDropdown" class="form-select-lg" aria-label="Default select example">
-                      <option selected>Categories</option>
-                      <option value="pages/pokemon.html">Pokemon</option>
-                      <option value="pages/marvel.html">Marvel</option>
-                      <option value="pages/dc.html">DC</option>
-                      <option value="pages/onepiece.html">One Piece</option>
-                      <option value="pages/weiss.html">Weiss Schwarz</option>
-                      <option value="pages/yugioh.html">Yugioh</option>
-                      <option value="pages/misccards.html">Misc</option>
-                    </select>
-                </div>
+        <center>
+             <img src="https://www.dropbox.com/scl/fi/dqf02zoffvbq3a737diw4/site_card_logo.png?rlkey=mkdnpq4o9hgjq9cpgg9jad2o0&st=dizfdhxx&raw=1"/>
+        </center>
+        <div class="row">
+            <div class="col align-self-center">
+                <select id="categoriesDropdown" class="form-select-lg" aria-label="Default select example">
+                  <option selected>Categories</option>
+                  <option value="pages/pokemon.html">Pokemon</option>
+                  <option value="pages/marvel.html">Marvel</option>
+                  <option value="pages/dc.html">DC</option>
+                  <option value="pages/onepiece.html">One Piece</option>
+                  <option value="pages/weiss.html">Weiss Schwarz</option>
+                  <option value="pages/yugioh.html">Yugioh</option>
+                  <option value="pages/misccards.html">Misc</option>
+                </select>
             </div>
-        
-            <center>
-            </center>
-            <footer>
-            </footer>
+        </div>
     </div>
 
 
     <!-- this is my JS via cdn -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript">
-        
-        // Handle dropdown selections
-        function goToNewPage()
-        {
-            console.log(document.getElementById("categoriesDropdown").value)
-            if (document.getElementById("categoriesDropdown").value != 'none') {
-                window.location = document.getElementById("categoriesDropdown").value
-            }
-        }
-        const selectDropdown = document.getElementById("categoriesDropdown");
-        selectDropdown.addEventListener('change', goToNewPage);
-    </script>
+    <script src="index.js"></script>
 
 </body>
 
