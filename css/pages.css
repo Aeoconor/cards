@@ -1,0 +1,15 @@
+.image-desc-row {
+    padding-bottom: 3%;
+}
+
+.image-desc-row img {
+    width: 50%;
+}
+
+.desc-col {
+    padding-top: 10%
+}
+
+.desc-col a {
+    font-size: xx-large;
+}
