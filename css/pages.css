@@ -82,7 +82,7 @@ select {
 #setFilterSubmit {
     margin-top: 2rem;
     height: 50%;
-    width: fit-content;
+    width: min-content;
     font-size: xx-large;
     border-style: solid;
     border-color: white;
