@@ -30,3 +30,9 @@ h1 {
 .home-logo {
     width: 75%;
 }
+
+.fixed-div {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+}
