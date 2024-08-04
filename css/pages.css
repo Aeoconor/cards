@@ -36,3 +36,22 @@ h1 {
     z-index: 999;
     top: 0;
 }
+
+#sidenav {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    background-color: black;
+    border-style: solid;
+    border-color: white;
+    border-width: thin;
+    border-radius: 0.5rem;
+    color:lime;
+}
+
+.sidebarDiv {
+    border-radius: 0.5rem;
+    border-color: white;
+    border-style: solid;
+    border-width: thin;
+}
