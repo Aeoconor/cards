@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // select all desc-col elements
     const descColList = document.querySelectorAll(".desc-col")
     const sidebarElement = document.getElementById("sidenav")
-    console.log(sidebarElement)
+    const topFilterBar = document.getElementById("setFilterBar")
     var counter = 1;
+    var appendedSets = []
     descColList.forEach((element) => {
         // for each, add the custom ebay sold link
         combinedSetCard = element.lastElementChild.textContent.concat(" " + element.firstElementChild.textContent)
@@ -21,6 +22,29 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById(element.firstElementChild.id).scrollIntoView({behavior: 'smooth'});
         })
         counter++
+
+        // top dropdown options
+        var optionElement = document.createElement('option')
+        optionElement.value = element.lastElementChild.textContent
+        optionElement.textContent = element.lastElementChild.textContent
+        if (!appendedSets.includes(optionElement.textContent)){
+            topFilterBar.firstElementChild.appendChild(optionElement)
+        }
+        appendedSets.push(element.lastElementChild.textContent)
+    })
+
+    // handle set filtering
+    const topFilterSubmit = document.getElementById("setFilterSubmit")
+    topFilterSubmit.addEventListener('click', () => {
+        var filterValue = topFilterBar.firstElementChild.value
+        descColList.forEach((element) => {
+            if (element.lastElementChild.textContent == filterValue || filterValue == 'any') {
+                element.parentElement.style.display = 'flex'
+            }
+            if (element.lastElementChild.textContent != filterValue && filterValue != 'any') {
+                element.parentElement.style.display = 'none'
+            }
+        })
     })
 
     // image click to open in new tab

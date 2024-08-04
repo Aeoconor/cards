@@ -13,14 +13,20 @@
 <body style='background-color: black;'>
     <div class="container-fluid text-center">
         <center>
-            <div class="row fixed-div">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-6">
+                    <div id="setFilterBar" class="form-select">
+                        <select class="form-select form-select-lg" aria-label="Default select example">
+                          <option selected>Choose a set...</option>
+                          <option value="any">Any</option>
+                        </select>
+                    </div>
+                </div>
                 <div class="col-2">
-                    <a href="../index.html">
-                        <img class="home-logo" src="https://www.dropbox.com/scl/fi/dqf02zoffvbq3a737diw4/site_card_logo.png?rlkey=mkdnpq4o9hgjq9cpgg9jad2o0&st=dizfdhxx&raw=1"/>
-                    </a>
+                    <button id="setFilterSubmit" type="submit" class="btn btn-secondary mb-3">Filter</button>
                 </div>
             </div>
-            <h1>Pokemon Cards</h1>
             <div class="row">
                 <div id='sidenav' class="col-2">
                     <div>

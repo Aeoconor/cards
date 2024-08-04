@@ -64,4 +64,29 @@ h1 {
     border-width: thin;
     cursor: pointer;
     font-size: x-large;
+    margin-bottom: 1.5rem;
+}
+
+select {
+    height: 3.5rem;
+    width: 100%;
+    border-radius: 1rem;
+    font-size: x-large !important;
+    background:black;
+    color: white;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    cursor: pointer;
+}
+
+#setFilterSubmit {
+    margin-top: 2rem;
+    height: 50%;
+    width: 50%;
+    font-size: xx-large;
+    border-style: solid;
+    border-color: white;
+    background-color: black;
+    color: lime;
+    cursor: pointer;
 }
