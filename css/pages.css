@@ -24,6 +24,9 @@
 h1 {
     font-size: 90px !important;
     padding-bottom: 5%;
-    padding-top: 5%;
     color: dimgrey !important;
+}
+
+.home-logo {
+    width: 75%;
 }
