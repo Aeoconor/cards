@@ -4,6 +4,10 @@
 
 .image-desc-row img {
     width: 50%;
+    border-style: solid;
+    border-width: 0.5rem;
+    border-color: dimgrey;
+    border-radius: 1rem;
 }
 
 .desc-col {
@@ -12,6 +16,16 @@
 
 .desc-col a {
     font-size: xx-large;
+    color: lime;
+}
+
+.desc-col h2 {
+    font-size: xx-large;
+    color: darkgreen;
+}
+
+hr {
+    border-color: white !important;
 }
 
 .container-fluid {

@@ -1,14 +1,17 @@
 // Handle dropdown selections
 if(performance.navigation.type == 2){
     location.reload(true);
- }
-function goToNewPage()
-{
-    if (document.getElementById("categoriesDropdown").value != 'none') {
-        if (document.getElementById("categoriesDropdown").value != 'Categories') {
-            window.location = document.getElementById("categoriesDropdown").value
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    function goToNewPage()
+    {
+        if (document.getElementById("categoriesDropdown").value != 'none') {
+            if (document.getElementById("categoriesDropdown").value != 'Categories') {
+                window.location = document.getElementById("categoriesDropdown").value
+            }
         }
     }
-}
-const selectDropdown = document.getElementById("categoriesDropdown");
-selectDropdown.addEventListener('change', goToNewPage);
+    const selectDropdown = document.getElementById("categoriesDropdown");
+    selectDropdown.addEventListener('change', goToNewPage);
+})
