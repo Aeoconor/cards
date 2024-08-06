@@ -109,3 +109,13 @@ select {
     color: lime;
     cursor: pointer;
 }
+
+#card-search {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-color: white;
+    border-radius: 0.5rem;
+    margin-bottom: 10%;
+}

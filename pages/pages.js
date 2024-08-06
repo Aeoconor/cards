@@ -56,4 +56,18 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    // handle search bar
+    const cardSearchElement = document.getElementById("card-search")
+    cardSearchElement.addEventListener('input', () => {
+        const sideBarDivs = document.querySelectorAll(".sidebarDiv")
+        const regx = new RegExp(`^${cardSearchElement.value.toUpperCase()}`)
+        sideBarDivs.forEach((element) => {
+            if (regx.test(element.textContent.toUpperCase())) {
+                element.style.display = 'block'
+            } else {
+                element.style.display = 'none'
+            }
+        })
+    })
+
 });
