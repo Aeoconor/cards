@@ -11,7 +11,8 @@
 }
 
 .desc-col {
-    padding-top: 10%
+    padding-top: 10%;
+    padding-right: 5% !important;
 }
 
 .desc-col a {
@@ -22,6 +23,10 @@
 .desc-col h2 {
     font-size: xx-large;
     color: darkgreen;
+}
+
+.img-col {
+    margin-right: -10%;
 }
 
 hr {
