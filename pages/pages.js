@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function() {
     // select all desc-col elements
     const descColList = document.querySelectorAll(".desc-col")
@@ -8,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var appendedSets = []
     descColList.forEach((element) => {
         // for each, add the custom ebay sold link
+        // TODO: add a set checklist link to the set text
         combinedSetCard = element.lastElementChild.textContent.concat(" " + element.firstElementChild.textContent)
         searchableText = combinedSetCard.replaceAll(" ", "+")
         element.firstElementChild.href = `https://www.ebay.com/sch/i.html?_nkw=${searchableText}&LH_Sold=1&LH_Complete=1`
@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     // handle set filtering
+    // TODO: Merge search and set filter
     const topFilterSubmit = document.getElementById("setFilterSubmit")
     topFilterSubmit.addEventListener('click', () => {
         var filterValue = topFilterBar.firstElementChild.value
@@ -57,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // handle search bar
+    // TODO: Merge search and set filter
     const cardSearchElement = document.getElementById("card-search")
     cardSearchElement.addEventListener('input', () => {
         const sideBarDivs = document.querySelectorAll(".sidebarDiv")
