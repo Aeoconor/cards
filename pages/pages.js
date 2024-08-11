@@ -10,8 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
         // TODO: add a set checklist link to the set text
         combinedSetCard = element.lastElementChild.textContent.concat(" " + element.firstElementChild.textContent)
         searchableText = combinedSetCard.replaceAll(" ", "+")
+        searchableSetText = element.lastElementChild.textContent.concat(" " + "checklist").replaceAll(" ", "+")
         element.firstElementChild.href = `https://www.ebay.com/sch/i.html?_nkw=${searchableText}&LH_Sold=1&LH_Complete=1`
         element.firstElementChild.id = `link${counter}`
+        element.lastElementChild.href = `https://www.google.com/search?q=${searchableSetText}`
 
         // sidebar building
         var div = document.createElement('div')

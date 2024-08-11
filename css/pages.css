@@ -20,9 +20,9 @@
     color: lime;
 }
 
-.desc-col h2 {
+.set-link {
     font-size: xx-large;
-    color: darkgreen;
+    color: darkgreen !important;
 }
 
 .img-col {
