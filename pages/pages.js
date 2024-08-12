@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // select all desc-col elements
+    // TODO: Implement pagination to help with loading
     const descColList = document.querySelectorAll(".desc-col")
     const sidebarElement = document.getElementById("sidenav")
     const topFilterBar = document.getElementById("setFilterBar")
