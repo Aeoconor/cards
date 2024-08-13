@@ -1,3 +1,15 @@
+
+// retry image loading
+function tryAgain(e) 
+{
+    setTimeout(reloadImg, 5000, e);
+}
+function reloadImg(e)
+{
+    var source = e.src;
+    e.src = source;
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     // select all desc-col elements
     // TODO: Implement pagination to help with loading
