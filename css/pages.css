@@ -8,6 +8,7 @@
     border-width: 0.5rem;
     border-color: dimgrey;
     border-radius: 1rem;
+    background: transparent url(/media/loader.gif) no-repeat scroll center center;
 }
 
 .desc-col {
