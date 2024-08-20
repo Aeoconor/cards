@@ -48,6 +48,16 @@ document.addEventListener("DOMContentLoaded", function() {
         appendedSets.push(element.lastElementChild.textContent)
     })
 
+    $("#setFilterBar select").html($("option").sort(function (a, b) {
+        if (a.text == "Choose a set..." && b.text == "Any") {return -1}
+        if (b.text == "Choose a set..." && a.text == "Any") {return 1}
+        if (a.text == "Any") {return -1}
+        if (b.text == "Any") {return 1}
+        if (a.text == "Choose a set...") {return -1}
+        if (b.text == "Choose a set...") {return 1}
+        return a.text == b.text ? 0 : a.text < b.text ? -1 : 1
+    }))
+
     // handle set filtering
     // TODO: Merge search and set filter
     const topFilterSubmit = document.getElementById("setFilterSubmit")
@@ -78,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
     cardSearchElement.addEventListener('input', () => {
         const sideBarDivs = document.querySelectorAll(".sidebarDiv")
         const imgDescRows = document.querySelectorAll(".image-desc-row")
-        const regx = new RegExp(`^${cardSearchElement.value.toUpperCase()}`)
+        const regx = new RegExp(`${cardSearchElement.value.toUpperCase()}`)
         sideBarDivs.forEach((element) => {
             if (regx.test(element.textContent.toUpperCase())) {
                 element.style.display = 'block'
